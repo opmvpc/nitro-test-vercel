@@ -2,10 +2,11 @@
   "name": "example-hello-world",
   "private": true,
   "scripts": {
-    "dev": "nitro dev",
-    "build": "nitro build"
+    "dev": "concurrently \"nitro dev\" \"cd front && vite\"",
+    "build": "nitro build && cd front && vite build"
   },
   "devDependencies": {
-    "nitropack": "latest"
+    "nitropack": "latest",
+    "concurrently": "^8.2.1"
   }
 }
