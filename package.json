@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"nitro dev\" \"cd front && vite\"",
-    "build": "nitro build && cd front && vite build"
+    "build": "nitro build && cd front && vite build && cp -r dist ../public"
   },
   "devDependencies": {
     "nitropack": "latest",
